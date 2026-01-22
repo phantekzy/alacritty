@@ -1,0 +1,14 @@
+# Windows-specific temporary files
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Editor-specific (Neovim/Vim/VSCode)
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Git/System
+.DS_Store
+*.tmp
