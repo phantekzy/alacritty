@@ -1,23 +1,23 @@
-# --- Phantekzy Pro Windows Config (2026) ---
+# --- Phantekzy Fixed Windows Config (2026) ---
 
 [window]
 opacity = 1.0
 decorations = "full"
 padding = { x = 8, y = 8 }
 dynamic_title = true
-# Start maximized, but you can toggle Fullscreen with F11 now
-startup_mode = "Maximized"
+# Changed to Windowed so you can move/resize it easily
+startup_mode = "Windowed" 
+dimensions = { columns = 120, lines = 30 }
 
 [scrolling]
 history = 50000
 multiplier = 3
 
 [font]
-normal = { family = "FiraCode Nerd Font", style = "Regular" }
+normal = { family = "FiraCode Nerd Font", style = "Bold" }
 bold = { family = "FiraCode Nerd Font", style = "Bold" }
-italic = { family = "FiraCode Nerd Font", style = "Italic" }
-bold_italic = { family = "FiraCode Nerd Font", style = "Bold Italic" }
-size = 11.5
+italic = { family = "FiraCode Nerd Font", style = "Bold Italic" }
+size = 12.0
 
 [cursor]
 style = { shape = "Beam", blinking = "Always" }
@@ -27,10 +27,12 @@ blink_interval = 500
 program = "powershell.exe"
 args = ["-NoLogo", "-NoExit", "-Command", "Set-Location $HOME\\Desktop"]
 
-# --- PRO KEYBINDINGS (Kitty Style) ---
+# --- KEYBINDINGS (FIXED FULLSCREEN) ---
 [[keyboard.bindings]]
 key = "F11"
-action = "ToggleFullscreen"
+# We use ToggleFullscreen for the TRUE "No Bar" look
+# If you want to keep the taskbar visible, change this to "ToggleMaximized"
+action = "ToggleFullscreen" 
 
 [[keyboard.bindings]]
 key = "Plus"
@@ -60,31 +62,11 @@ action = "Paste"
 [env]
 TERM = "xterm-256color"
 
-# --- TOKYONIGHT NIGHT COLORS ---
+# --- DEEP BLACK TOKYONIGHT COLORS ---
 [colors.primary]
-background = "#1a1b26"
+background = "#000000"
 foreground = "#c0caf5"
 
-[colors.normal]
-black   = "#15161e"
-red     = "#f7768e"
-green   = "#9ece6a"
-yellow  = "#e0af68"
-blue    = "#7aa2f7"
-magenta = "#bb9af7"
-cyan    = "#7dcfff"
-white   = "#a9b1d6"
-
-[colors.bright]
-black   = "#414868"
-red     = "#f7768e"
-green   = "#9ece6a"
-yellow  = "#e0af68"
-blue    = "#7aa2f7"
-magenta = "#bb9af7"
-cyan    = "#7dcfff"
-white   = "#c0caf5"
-
 [colors.cursor]
-text   = "#1a1b26"
+text = "#000000"
 cursor = "#c0caf5"
